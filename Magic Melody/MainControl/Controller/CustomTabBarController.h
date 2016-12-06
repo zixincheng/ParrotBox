@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CustomTabBarController.h
 //  Magic Melody
 //
 //  Created by zixin cheng on 2016-11-24.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
 
+@interface CustomTabBarController : UITabBarController
 
 @end
-

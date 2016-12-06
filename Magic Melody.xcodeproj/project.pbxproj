@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		944EA2541DE7FF5100C4A0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2531DE7FF5100C4A0F0 /* main.m */; };
 		944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2561DE7FF5100C4A0F0 /* AppDelegate.m */; };
-		944EA25A1DE7FF5100C4A0F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2591DE7FF5100C4A0F0 /* ViewController.m */; };
 		944EA25D1DE7FF5100C4A0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944EA25B1DE7FF5100C4A0F0 /* Main.storyboard */; };
 		944EA2601DE7FF5100C4A0F0 /* Magic_Melody.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 944EA25E1DE7FF5100C4A0F0 /* Magic_Melody.xcdatamodeld */; };
 		944EA2621DE7FF5100C4A0F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2611DE7FF5100C4A0F0 /* Assets.xcassets */; };
 		944EA2651DE7FF5100C4A0F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2631DE7FF5100C4A0F0 /* LaunchScreen.storyboard */; };
+		944EA2AB1DF62DD500C4A0F0 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2A91DF62DD500C4A0F0 /* HomePageViewController.xib */; };
+		944EA2B21DF62E6200C4A0F0 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2AF1DF62E6200C4A0F0 /* UIImage+Image.m */; };
+		944EA2B31DF62E6200C4A0F0 /* UIView+CustomExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2B11DF62E6200C4A0F0 /* UIView+CustomExtension.m */; };
+		944EA2B91DF62E7F00C4A0F0 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2B61DF62E7F00C4A0F0 /* CustomNavigationController.m */; };
+		944EA2BA1DF62E7F00C4A0F0 /* CustomTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2B81DF62E7F00C4A0F0 /* CustomTabBarController.m */; };
+		944EA2BE1DF62E9E00C4A0F0 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2BD1DF62E9E00C4A0F0 /* CustomTabBar.m */; };
+		944EA2C61DF681A200C4A0F0 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2C51DF681A200C4A0F0 /* HomePageViewController.m */; };
+		944EA2CB1DF6822F00C4A0F0 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2C91DF6822F00C4A0F0 /* LibraryViewController.m */; };
+		944EA2CE1DF6826D00C4A0F0 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2CD1DF6826D00C4A0F0 /* LibraryViewController.xib */; };
+		944EA2D61DF6844800C4A0F0 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2D41DF6844800C4A0F0 /* ComposeViewController.m */; };
+		944EA2D91DF6849300C4A0F0 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2D81DF6849300C4A0F0 /* ComposeViewController.xib */; };
+		944EA2E11DF686A900C4A0F0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2DF1DF686A900C4A0F0 /* SettingViewController.m */; };
+		944EA2E41DF687B500C4A0F0 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2E31DF687B500C4A0F0 /* SettingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +33,33 @@
 		944EA2531DE7FF5100C4A0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		944EA2551DE7FF5100C4A0F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		944EA2561DE7FF5100C4A0F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		944EA2581DE7FF5100C4A0F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		944EA2591DE7FF5100C4A0F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		944EA25C1DE7FF5100C4A0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		944EA25F1DE7FF5100C4A0F0 /* Magic_Melody.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Magic_Melody.xcdatamodel; sourceTree = "<group>"; };
 		944EA2611DE7FF5100C4A0F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		944EA2641DE7FF5100C4A0F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944EA2661DE7FF5100C4A0F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944EA2A91DF62DD500C4A0F0 /* HomePageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
+		944EA2AE1DF62E6200C4A0F0 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Image.h"; path = "Magic Melody/MainControl/Category/UIImage+Image.h"; sourceTree = SOURCE_ROOT; };
+		944EA2AF1DF62E6200C4A0F0 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Image.m"; path = "Magic Melody/MainControl/Category/UIImage+Image.m"; sourceTree = SOURCE_ROOT; };
+		944EA2B01DF62E6200C4A0F0 /* UIView+CustomExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CustomExtension.h"; path = "Magic Melody/MainControl/Category/UIView+CustomExtension.h"; sourceTree = SOURCE_ROOT; };
+		944EA2B11DF62E6200C4A0F0 /* UIView+CustomExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+CustomExtension.m"; path = "Magic Melody/MainControl/Category/UIView+CustomExtension.m"; sourceTree = SOURCE_ROOT; };
+		944EA2B51DF62E7F00C4A0F0 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationController.h; path = "Magic Melody/MainControl/Controller/CustomNavigationController.h"; sourceTree = SOURCE_ROOT; };
+		944EA2B61DF62E7F00C4A0F0 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationController.m; path = "Magic Melody/MainControl/Controller/CustomNavigationController.m"; sourceTree = SOURCE_ROOT; };
+		944EA2B71DF62E7F00C4A0F0 /* CustomTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBarController.h; path = "Magic Melody/MainControl/Controller/CustomTabBarController.h"; sourceTree = SOURCE_ROOT; };
+		944EA2B81DF62E7F00C4A0F0 /* CustomTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBarController.m; path = "Magic Melody/MainControl/Controller/CustomTabBarController.m"; sourceTree = SOURCE_ROOT; };
+		944EA2BC1DF62E9E00C4A0F0 /* CustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTabBar.h; path = "Magic Melody/MainControl/View/CustomTabBar.h"; sourceTree = SOURCE_ROOT; };
+		944EA2BD1DF62E9E00C4A0F0 /* CustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomTabBar.m; path = "Magic Melody/MainControl/View/CustomTabBar.m"; sourceTree = SOURCE_ROOT; };
+		944EA2C41DF681A200C4A0F0 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePageViewController.h; path = Home/Controller/HomePageViewController.h; sourceTree = "<group>"; };
+		944EA2C51DF681A200C4A0F0 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePageViewController.m; path = Home/Controller/HomePageViewController.m; sourceTree = "<group>"; };
+		944EA2C81DF6822F00C4A0F0 /* LibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibraryViewController.h; path = Library/Controller/LibraryViewController.h; sourceTree = "<group>"; };
+		944EA2C91DF6822F00C4A0F0 /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LibraryViewController.m; path = Library/Controller/LibraryViewController.m; sourceTree = "<group>"; };
+		944EA2CD1DF6826D00C4A0F0 /* LibraryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LibraryViewController.xib; path = Library/View/LibraryViewController.xib; sourceTree = "<group>"; };
+		944EA2D31DF6844800C4A0F0 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComposeViewController.h; path = Compose/Controller/ComposeViewController.h; sourceTree = "<group>"; };
+		944EA2D41DF6844800C4A0F0 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComposeViewController.m; path = Compose/Controller/ComposeViewController.m; sourceTree = "<group>"; };
+		944EA2D81DF6849300C4A0F0 /* ComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ComposeViewController.xib; path = Compose/View/ComposeViewController.xib; sourceTree = "<group>"; };
+		944EA2DE1DF686A900C4A0F0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Setting/Controller/SettingViewController.h; sourceTree = "<group>"; };
+		944EA2DF1DF686A900C4A0F0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Setting/Controller/SettingViewController.m; sourceTree = "<group>"; };
+		944EA2E31DF687B500C4A0F0 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Setting/View/SettingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +92,13 @@
 		944EA2511DE7FF5100C4A0F0 /* Magic Melody */ = {
 			isa = PBXGroup;
 			children = (
+				944EA2DA1DF6854600C4A0F0 /* Setting */,
+				944EA2CF1DF6827900C4A0F0 /* Compose */,
+				944EA2A01DF62CB000C4A0F0 /* Library */,
+				944EA29F1DF62CA700C4A0F0 /* Home */,
+				944EA2811DE8061D00C4A0F0 /* MainControl */,
 				944EA2551DE7FF5100C4A0F0 /* AppDelegate.h */,
 				944EA2561DE7FF5100C4A0F0 /* AppDelegate.m */,
-				944EA2581DE7FF5100C4A0F0 /* ViewController.h */,
-				944EA2591DE7FF5100C4A0F0 /* ViewController.m */,
 				944EA25B1DE7FF5100C4A0F0 /* Main.storyboard */,
 				944EA2611DE7FF5100C4A0F0 /* Assets.xcassets */,
 				944EA2631DE7FF5100C4A0F0 /* LaunchScreen.storyboard */,
@@ -80,6 +115,192 @@
 				944EA2531DE7FF5100C4A0F0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		944EA2811DE8061D00C4A0F0 /* MainControl */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2BB1DF62E9800C4A0F0 /* View */,
+				944EA2B41DF62E7000C4A0F0 /* Controller */,
+				944EA2AD1DF62E5800C4A0F0 /* Category */,
+				944EA2AC1DF62E4E00C4A0F0 /* Model */,
+			);
+			name = MainControl;
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		944EA29F1DF62CA700C4A0F0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2A31DF62D5B00C4A0F0 /* Model */,
+				944EA2A21DF62D5100C4A0F0 /* View */,
+				944EA2A11DF62D4500C4A0F0 /* Controller */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		944EA2A01DF62CB000C4A0F0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2A61DF62D7D00C4A0F0 /* Controller */,
+				944EA2A51DF62D7500C4A0F0 /* Model */,
+				944EA2A41DF62D6A00C4A0F0 /* View */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		944EA2A11DF62D4500C4A0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2C41DF681A200C4A0F0 /* HomePageViewController.h */,
+				944EA2C51DF681A200C4A0F0 /* HomePageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		944EA2A21DF62D5100C4A0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2A91DF62DD500C4A0F0 /* HomePageViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		944EA2A31DF62D5B00C4A0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		944EA2A41DF62D6A00C4A0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2CD1DF6826D00C4A0F0 /* LibraryViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		944EA2A51DF62D7500C4A0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		944EA2A61DF62D7D00C4A0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2C81DF6822F00C4A0F0 /* LibraryViewController.h */,
+				944EA2C91DF6822F00C4A0F0 /* LibraryViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		944EA2AC1DF62E4E00C4A0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		944EA2AD1DF62E5800C4A0F0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2AE1DF62E6200C4A0F0 /* UIImage+Image.h */,
+				944EA2AF1DF62E6200C4A0F0 /* UIImage+Image.m */,
+				944EA2B01DF62E6200C4A0F0 /* UIView+CustomExtension.h */,
+				944EA2B11DF62E6200C4A0F0 /* UIView+CustomExtension.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		944EA2B41DF62E7000C4A0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2B51DF62E7F00C4A0F0 /* CustomNavigationController.h */,
+				944EA2B61DF62E7F00C4A0F0 /* CustomNavigationController.m */,
+				944EA2B71DF62E7F00C4A0F0 /* CustomTabBarController.h */,
+				944EA2B81DF62E7F00C4A0F0 /* CustomTabBarController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		944EA2BB1DF62E9800C4A0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2BC1DF62E9E00C4A0F0 /* CustomTabBar.h */,
+				944EA2BD1DF62E9E00C4A0F0 /* CustomTabBar.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		944EA2CF1DF6827900C4A0F0 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2D21DF6830900C4A0F0 /* Controller */,
+				944EA2D11DF6830400C4A0F0 /* Model */,
+				944EA2D01DF682FC00C4A0F0 /* View */,
+			);
+			name = Compose;
+			sourceTree = "<group>";
+		};
+		944EA2D01DF682FC00C4A0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2D81DF6849300C4A0F0 /* ComposeViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		944EA2D11DF6830400C4A0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		944EA2D21DF6830900C4A0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2D31DF6844800C4A0F0 /* ComposeViewController.h */,
+				944EA2D41DF6844800C4A0F0 /* ComposeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		944EA2DA1DF6854600C4A0F0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2DD1DF6857B00C4A0F0 /* View */,
+				944EA2DC1DF6857500C4A0F0 /* Model */,
+				944EA2DB1DF6855200C4A0F0 /* Controller */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		944EA2DB1DF6855200C4A0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2DE1DF686A900C4A0F0 /* SettingViewController.h */,
+				944EA2DF1DF686A900C4A0F0 /* SettingViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		944EA2DC1DF6857500C4A0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		944EA2DD1DF6857B00C4A0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944EA2E31DF687B500C4A0F0 /* SettingViewController.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +361,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944EA2E41DF687B500C4A0F0 /* SettingViewController.xib in Resources */,
+				944EA2AB1DF62DD500C4A0F0 /* HomePageViewController.xib in Resources */,
+				944EA2D91DF6849300C4A0F0 /* ComposeViewController.xib in Resources */,
+				944EA2CE1DF6826D00C4A0F0 /* LibraryViewController.xib in Resources */,
 				944EA2651DE7FF5100C4A0F0 /* LaunchScreen.storyboard in Resources */,
 				944EA2621DE7FF5100C4A0F0 /* Assets.xcassets in Resources */,
 				944EA25D1DE7FF5100C4A0F0 /* Main.storyboard in Resources */,
@@ -153,10 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944EA25A1DE7FF5100C4A0F0 /* ViewController.m in Sources */,
+				944EA2CB1DF6822F00C4A0F0 /* LibraryViewController.m in Sources */,
+				944EA2B21DF62E6200C4A0F0 /* UIImage+Image.m in Sources */,
+				944EA2C61DF681A200C4A0F0 /* HomePageViewController.m in Sources */,
+				944EA2B91DF62E7F00C4A0F0 /* CustomNavigationController.m in Sources */,
 				944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */,
 				944EA2541DE7FF5100C4A0F0 /* main.m in Sources */,
+				944EA2BE1DF62E9E00C4A0F0 /* CustomTabBar.m in Sources */,
 				944EA2601DE7FF5100C4A0F0 /* Magic_Melody.xcdatamodeld in Sources */,
+				944EA2D61DF6844800C4A0F0 /* ComposeViewController.m in Sources */,
+				944EA2BA1DF62E7F00C4A0F0 /* CustomTabBarController.m in Sources */,
+				944EA2B31DF62E6200C4A0F0 /* UIView+CustomExtension.m in Sources */,
+				944EA2E11DF686A900C4A0F0 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

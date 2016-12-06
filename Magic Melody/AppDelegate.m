@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
+    CustomTabBarController *tabBarVc = [[CustomTabBarController alloc] init];
+    
+    
+    CATransition *anim = [[CATransition alloc] init];
+    anim.type = @"rippleEffect";
+    anim.duration = 1.0;
+    
+    
+    [self.window.layer addAnimation:anim forKey:nil];
+    
+    
+    self.window.rootViewController = tabBarVc;
+    
+    
+    
+    
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+
     return YES;
 }
 
