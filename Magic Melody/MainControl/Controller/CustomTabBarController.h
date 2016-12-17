@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-
-@interface CustomTabBarController : UITabBarController
+@interface CustomTabBarController : UITabBarController <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
 
 @end

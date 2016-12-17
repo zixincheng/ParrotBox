@@ -5,7 +5,7 @@
 //  Created by zixin cheng on 2016-11-24.
 //  Copyright © 2016 zixin. All rights reserved.
 //
-
+#include <AudioToolbox/AudioToolbox.h>
 #import "CustomTabBar.h"
 #import <objc/runtime.h>
 #import "UIImage+Image.h"
@@ -45,7 +45,10 @@
         self.plusBtn = plusBtn;
         
         
-        [plusBtn addTarget:self action:@selector(plusBtnDidClick) forControlEvents:UIControlEventTouchUpInside];
+        //when button touch inside
+        [plusBtn addTarget:self action:@selector(plusBtnDidClick) forControlEvents:UIControlEventTouchDown];
+        
+        [plusBtn addTarget:self action:@selector(plusBtnDidRelease) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:plusBtn];
         
@@ -110,6 +113,15 @@
     }
     
 }
+
+-(void) plusBtnDidRelease
+{
+    if ([self.delegate respondsToSelector:@selector(tabBarPlusBtnRelease:)]) {
+        [self.myDelegate tabBarPlusBtnRelease:self];
+    }
+}
+
+
 
 //重写hitTest方法，去监听发布按钮的点击，目的是为了让凸出的部分点击也有反应
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {

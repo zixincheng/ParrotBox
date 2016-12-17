@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class CustomTabBar;
 
 @protocol CustomTabBarDelegate <NSObject>
 @optional
 - (void)tabBarPlusBtnClick:(CustomTabBar *)tabBar;
+- (void)tabBarPlusBtnRelease:(CustomTabBar *)tabBar;
 @end
 
 

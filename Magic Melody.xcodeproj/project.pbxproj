@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0285C3741E05156100CD27DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3711E05156100CD27DE /* AVFoundation.framework */; };
+		0285C3761E05158700CD27DE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3751E05158700CD27DE /* Accelerate.framework */; };
 		944EA2541DE7FF5100C4A0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2531DE7FF5100C4A0F0 /* main.m */; };
 		944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2561DE7FF5100C4A0F0 /* AppDelegate.m */; };
 		944EA25D1DE7FF5100C4A0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944EA25B1DE7FF5100C4A0F0 /* Main.storyboard */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0285C36F1E05156100CD27DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0285C3701E05156100CD27DE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		0285C3711E05156100CD27DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0285C3751E05158700CD27DE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		944EA24F1DE7FF5100C4A0F0 /* Magic Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic Melody.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944EA2531DE7FF5100C4A0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		944EA2551DE7FF5100C4A0F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,17 +73,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0285C3761E05158700CD27DE /* Accelerate.framework in Frameworks */,
+				0285C3741E05156100CD27DE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0285C36E1E05156000CD27DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0285C3751E05158700CD27DE /* Accelerate.framework */,
+				0285C36F1E05156100CD27DE /* AudioToolbox.framework */,
+				0285C3701E05156100CD27DE /* AudioUnit.framework */,
+				0285C3711E05156100CD27DE /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		944EA2461DE7FF5100C4A0F0 = {
 			isa = PBXGroup;
 			children = (
 				944EA2511DE7FF5100C4A0F0 /* Magic Melody */,
 				944EA2501DE7FF5100C4A0F0 /* Products */,
+				0285C36E1E05156000CD27DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -540,6 +560,7 @@
 				944EA26B1DE7FF5100C4A0F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -5,6 +5,8 @@
 //  Created by zixin cheng on 2016-11-24.
 //  Copyright © 2016 zixin. All rights reserved.
 //
+#include <AudioToolbox/AudioToolbox.h>
+
 
 #import "CustomTabBarController.h"
 #import "CustomNavigationController.h"
@@ -17,7 +19,21 @@
 #import "UIImage+Image.h"
 
 
-@interface CustomTabBarController ()<CustomTabBarDelegate>
+
+#define MaximumRecordTime 10.0 //define max record time
+@interface CustomTabBarController ()<CustomTabBarDelegate>{
+    //essentials to record and normal play back and mechanism
+    AVAudioPlayer *SoundPlayer;
+    AVAudioRecorder *SoundRecorder;
+    NSArray *RecordPathComponents;
+    NSURL *RecordOutputFileURL;
+    
+    AVAudioRecorder *saveSoundRecorder;//sound recorder foe saving
+    
+    NSMutableDictionary *recordSetting;
+    
+    
+}
 
 @end
 
@@ -51,7 +67,37 @@
     tabbar.myDelegate = self;
     //kvc实质是修改了系统的_tabBar
     [self setValue:tabbar forKeyPath:@"tabBar"];
+    
+    
+    //==================recorder
+    RecordPathComponents = [NSArray arrayWithObjects:
+                            [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                            @"MyAudioMemo.aac",
+                            nil];
+    RecordOutputFileURL = [NSURL fileURLWithPathComponents:RecordPathComponents];
+    
+    // Setup audio session
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:nil];
+    
+    // Define the recorder setting
+    recordSetting = [[NSMutableDictionary alloc] init];
+    
+    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatMPEG4AAC] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
+    
+    
+    // Initiate and prepare the recorder
+    SoundRecorder = [[AVAudioRecorder alloc] initWithURL:RecordOutputFileURL settings:recordSetting error:NULL];
+    SoundRecorder.delegate = self;
+    SoundRecorder.meteringEnabled = YES;
+    [SoundRecorder prepareToRecord];
+    NSLog(@"%@",RecordOutputFileURL);
+    //======================end recorder
 
+    
 
 }
 
@@ -124,7 +170,27 @@
 //点击中间按钮的代理方法
 - (void)tabBarPlusBtnClick:(CustomTabBar *)tabBar
 {
+    
+    if (SoundPlayer.playing) {//stop any sound when record
+        [SoundPlayer stop];
+    }
+    
+    if (!SoundRecorder.recording) {
+        AVAudioSession *session = [AVAudioSession sharedInstance];
+        [session setActive:YES error:nil];
+        
+        // Start recording
+        
+        [SoundRecorder record];
+        //[ SoundRecorder recordForDuration:(NSTimeInterval) recordTime];
+        
+        
+    }
+    else {
+        
+    }
 
+    
     /*
     LBpostViewController *plusVC = [[LBpostViewController alloc] init];
     plusVC.view.backgroundColor = [self randomColor];
@@ -136,7 +202,12 @@
 
 
 }
+- (void)tabBarPlusBtnRelease:(CustomTabBar *)tabBar
+{
+        //stop recorder when release the button
+    [SoundRecorder  stop];
 
+}
 
 - (UIColor *)randomColor
 {
