@@ -1,23 +1,40 @@
 //
-//  ComposeViewController.m
+//  recordingScreenController.m
 //  Magic Melody
 //
-//  Created by zixin cheng on 2016-12-05.
+//  Created by Angela Tang on 2016-12-18.
 //  Copyright © 2016 zixin. All rights reserved.
 //
 
-#import "ComposeViewController.h"
+#import "recordingScreenController.h"
 
-@interface ComposeViewController ()
+@interface recordingScreenController ()
+{
+    //for timer
+    UILabel *progress;
+    NSTimer *timer;
+    int currSec;
+    //======
+}
 
 @end
 
-@implementation ComposeViewController
+@implementation recordingScreenController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self.view setBackgroundColor:[UIColor redColor]];
+    
+    
+    
+    NSLog(@"new");
+    
+}
+
+
+-(void)viewWillAppear:(BOOL)animated{
     
 }
 

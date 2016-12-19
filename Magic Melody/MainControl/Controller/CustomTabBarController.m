@@ -15,6 +15,10 @@
 #import "LibraryViewController.h"
 #import "HomePageViewController.h"
 
+#import "recordingScreenController.h"
+
+
+
 #import "CustomTabBar.h"
 #import "UIImage+Image.h"
 
@@ -31,6 +35,8 @@
     AVAudioRecorder *saveSoundRecorder;//sound recorder foe saving
     
     NSMutableDictionary *recordSetting;
+    //============
+    
     
     
 }
@@ -59,7 +65,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self setUpAllChildVc];
 
     //创建自己的tabbar，然后用kvc将自己的tabbar和系统的tabBar替换下
@@ -67,6 +73,7 @@
     tabbar.myDelegate = self;
     //kvc实质是修改了系统的_tabBar
     [self setValue:tabbar forKeyPath:@"tabBar"];
+    
     
     
     //==================recorder
@@ -140,7 +147,7 @@
 - (void)setUpOneChildVcWithVc:(UIViewController *)Vc Image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title
 {
     CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:Vc];
-
+    
 
     Vc.view.backgroundColor = [self randomColor];
 
@@ -170,7 +177,14 @@
 //点击中间按钮的代理方法
 - (void)tabBarPlusBtnClick:(CustomTabBar *)tabBar
 {
+    recordingScreenController *recordScreenVC = [[recordingScreenController alloc] init];
+    [self.view addSubview:recordScreenVC.view];
+    [self.view bringSubviewToFront:self.tabBar];
     
+    
+    
+    
+     
     if (SoundPlayer.playing) {//stop any sound when record
         [SoundPlayer stop];
     }
