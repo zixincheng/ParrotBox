@@ -200,7 +200,7 @@
         
         [SoundRecorder record];
         
-        [self performSelector:@selector(tabBarPlusBtnRelease:) withObject:self.tabBar afterDelay:10.0];
+        [self performSelector:@selector(tabBarPlusBtnRelease:) withObject:self.tabBar afterDelay:MaximumRecordTime];
         //[ SoundRecorder recordForDuration:(NSTimeInterval) recordTime];
         
         

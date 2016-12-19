@@ -7,6 +7,7 @@
 //
 
 #import "recordingScreenController.h"
+#define MaximumRecordTime 10
 
 @interface recordingScreenController ()
 {
@@ -29,14 +30,14 @@
     
     progress=[[UILabel alloc] initWithFrame:CGRectMake(self.view.center.x-50, self.view.center.y -25, 100, 50)];
     progress.textColor=[UIColor blackColor];
-    [progress setText:@"Time: 10"];
+    [progress setText:[NSString stringWithFormat:@"Time: %i", MaximumRecordTime]];
     [progress setTextAlignment:NSTextAlignmentCenter];
     [progress adjustsFontSizeToFitWidth];
     
     progress.backgroundColor=[UIColor clearColor];
     [self.view addSubview:progress];
     
-    currSec= 10;
+    currSec= MaximumRecordTime;
     
     NSLog(@"Recording Screen Fired");
     [self start];
