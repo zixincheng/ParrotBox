@@ -182,15 +182,12 @@
 //点击中间按钮的代理方法
 - (void)tabBarPlusBtnClick:(CustomTabBar *)tabBar
 {
-    //record screed prepare
+    //record screen prepare
     recordScreenVC = [[recordingScreenController alloc] init];
     [self.view addSubview:recordScreenVC.view];
     [self.view bringSubviewToFront:self.tabBar];
     
-    
-    
-    
-     
+
     if (SoundPlayer.playing) {//stop any sound when record
         [SoundPlayer stop];
     }
@@ -227,7 +224,6 @@
 - (void)tabBarPlusBtnRelease:(CustomTabBar *)tabBar
 {
         //stop recorder when release the button
-
     [self.view bringSubviewToFront:self.tabBar];
     
     if(SoundRecorder.recording){//release
@@ -237,9 +233,19 @@
         
     }
     else{
-        //before 10 sec
-        NSLog(@"Something wrong with cancel selector");
+        //exception cases: if button hold for <10 sec and execute this, there are something wrong
+        //if == 10sec, correct
+        //NSLog(@"Button held until end");
     }
+    
+    //Check if the record is long enough and pass to cropping
+    //Idea: a fixed slider for 0.5 second. Value min:0 max: 9.5
+    //eg, when 2 is selected, range of 2-2.5 is selected and ready to preview or crop
+    //max is 9.5 to 10
+    
+    
+    
+    
 
 }
 
