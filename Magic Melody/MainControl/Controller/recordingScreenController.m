@@ -25,16 +25,47 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self.view setBackgroundColor:[UIColor redColor]];
+    [self.view setBackgroundColor:[UIColor yellowColor]];
     
+    progress=[[UILabel alloc] initWithFrame:CGRectMake(self.view.center.x-50, self.view.center.y -25, 100, 50)];
+    progress.textColor=[UIColor blackColor];
+    [progress setText:@"Time: 10"];
+    [progress setTextAlignment:NSTextAlignmentCenter];
+    [progress adjustsFontSizeToFitWidth];
     
+    progress.backgroundColor=[UIColor clearColor];
+    [self.view addSubview:progress];
     
-    NSLog(@"new");
+    currSec= 10;
+    
+    NSLog(@"Recording Screen Fired");
+    [self start];
     
 }
 
+-(void)start
+{
+    timer=[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+    
+}
+-(void)timerFired
+{
+    if(currSec>=0)
+    {
+        currSec -=1;
+            [progress setText:[NSString stringWithFormat:@"%@%i", @"Time: ",currSec]];
+    }
+    else
+    {
+        [timer invalidate];
+    }
+}
 
--(void)viewWillAppear:(BOOL)animated{
+
+
+
+-(void)viewWillDisappear:(BOOL)animated{
+    NSLog(@"Recording Screen Ends");
     
 }
 

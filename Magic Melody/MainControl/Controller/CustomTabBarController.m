@@ -37,6 +37,8 @@
     NSMutableDictionary *recordSetting;
     //============
     
+    //essentials for record screen
+    recordingScreenController *recordScreenVC;
     
     
 }
@@ -66,6 +68,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     [self setUpAllChildVc];
 
     //创建自己的tabbar，然后用kvc将自己的tabbar和系统的tabBar替换下
@@ -73,6 +77,7 @@
     tabbar.myDelegate = self;
     //kvc实质是修改了系统的_tabBar
     [self setValue:tabbar forKeyPath:@"tabBar"];
+    
     
     
     
@@ -177,7 +182,8 @@
 //点击中间按钮的代理方法
 - (void)tabBarPlusBtnClick:(CustomTabBar *)tabBar
 {
-    recordingScreenController *recordScreenVC = [[recordingScreenController alloc] init];
+    //record screed prepare
+    recordScreenVC = [[recordingScreenController alloc] init];
     [self.view addSubview:recordScreenVC.view];
     [self.view bringSubviewToFront:self.tabBar];
     
@@ -196,6 +202,8 @@
         // Start recording
         
         [SoundRecorder record];
+        
+        [self performSelector:@selector(tabBarPlusBtnRelease:) withObject:self.tabBar afterDelay:10.0];
         //[ SoundRecorder recordForDuration:(NSTimeInterval) recordTime];
         
         
@@ -219,7 +227,19 @@
 - (void)tabBarPlusBtnRelease:(CustomTabBar *)tabBar
 {
         //stop recorder when release the button
-    [SoundRecorder  stop];
+
+    [self.view bringSubviewToFront:self.tabBar];
+    
+    if(SoundRecorder.recording){//release
+        [recordScreenVC.view removeFromSuperview];
+        [SoundRecorder  stop];
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(tabBarPlusBtnRelease:)object: self.tabBar];//cancel the performselector request previously
+        
+    }
+    else{
+        //before 10 sec
+        NSLog(@"Something wrong with cancel selector");
+    }
 
 }
 
