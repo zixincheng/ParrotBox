@@ -36,6 +36,7 @@
 		023E81031E07A682001DDABA /* recordingScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = recordingScreenController.h; path = "Magic Melody/MainControl/Controller/recordingScreenController.h"; sourceTree = SOURCE_ROOT; };
 		023E81041E07A682001DDABA /* recordingScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = recordingScreenController.m; path = "Magic Melody/MainControl/Controller/recordingScreenController.m"; sourceTree = SOURCE_ROOT; };
 		023E81051E07A682001DDABA /* recordingScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = recordingScreenController.xib; path = "Magic Melody/MainControl/Controller/recordingScreenController.xib"; sourceTree = SOURCE_ROOT; };
+		023E81091E0AB66D001DDABA /* MusicCodeExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MusicCodeExample.h; path = "Magic Melody/MusicCodeExample.h"; sourceTree = SOURCE_ROOT; };
 		0285C36F1E05156100CD27DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0285C3701E05156100CD27DE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		0285C3711E05156100CD27DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +135,7 @@
 				944EA2811DE8061D00C4A0F0 /* MainControl */,
 				944EA2551DE7FF5100C4A0F0 /* AppDelegate.h */,
 				944EA2561DE7FF5100C4A0F0 /* AppDelegate.m */,
+				023E81091E0AB66D001DDABA /* MusicCodeExample.h */,
 				944EA25B1DE7FF5100C4A0F0 /* Main.storyboard */,
 				944EA2611DE7FF5100C4A0F0 /* Assets.xcassets */,
 				944EA2631DE7FF5100C4A0F0 /* LaunchScreen.storyboard */,
