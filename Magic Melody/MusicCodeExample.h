@@ -20,9 +20,209 @@
 //implement of real array with dictionary
 NSDictionary *music;
 NSMutableArray *MusicArray;
-//
+//==================
 
 
+//eg, result of HBD function will produce Json:
+(
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = 1;
+     sound = 0;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.75";
+     sound = 0;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 200;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 500;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 400;
+     rate = "0.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = 1;
+     sound = 0;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 200;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 600;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 400;
+     rate = "0.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = 1;
+     sound = 0;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "1.2";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 800;
+     rate = 1;
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 500;
+     rate = 1;
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 200;
+     rate = "1.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 200;
+     rate = "1.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 100;
+     rate = 1;
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "0.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = 1;
+     sound = 0;
+ },
+ {
+     overlapRate = 0;
+     pitch = 800;
+     rate = "1.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 800;
+     rate = "1.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 600;
+     rate = 1;
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 200;
+     rate = 1;
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 400;
+     rate = "0.75";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 200;
+     rate = "0.45";
+     sound = 1;
+ },
+ {
+     overlapRate = 0;
+     pitch = 1;
+     rate = "0.75";
+     sound = 0;
+ }
+ )
+//===========================
+
+
+
+//Below is the functions that produce Json:
 -(void)HBD{
     /**************************
      Propose Json format
@@ -388,68 +588,40 @@ NSMutableArray *MusicArray;
     
     //=======CONTENT START HERE============
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-300", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
-    
     [MusicArray addObject:music];
     
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-300", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
-    
     [MusicArray addObject:music];
     
-    
-    
+
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
-             nil];
+            nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
-             @"1.05", @"rate",
-             
+            @"1.05", @"rate",
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"600", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -457,307 +629,177 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"600", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
-    
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"0.75", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
-    
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
-    
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
-    
-    
-    
+
     music = [NSDictionary dictionaryWithObjectsAndKeys:
              
              @"1", @"sound",
-             
              @"-100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-300", @"pitch",
-             
              @"0.75", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
-             @"1", @"sound",
-             
+            @"1", @"sound",
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
+
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
+
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-100", @"pitch",
-             
              @"0.75", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
-    music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
+    music = [NSDictionary dicionaryWithObjectsAndKeys:
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
-    
-    
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -765,13 +807,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-100", @"pitch",
-             
              @"0.75", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -779,26 +817,18 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-300", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-300", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -806,13 +836,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -820,13 +846,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -834,13 +856,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"600", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -848,13 +866,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"600", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -862,13 +876,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"400", @"pitch",
-             
              @"0.75", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -876,13 +886,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -890,13 +896,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"200", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -904,13 +906,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -918,13 +916,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -932,13 +926,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -946,13 +936,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-100", @"pitch",
-             
              @"1.05", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
@@ -960,13 +946,9 @@ NSMutableArray *MusicArray;
     
     
     music = [NSDictionary dictionaryWithObjectsAndKeys:
-             
              @"1", @"sound",
-             
              @"-300", @"pitch",
-             
              @"0.75", @"rate",
-             
              nil];
     
     [MusicArray addObject:music];
