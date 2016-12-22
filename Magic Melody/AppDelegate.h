@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,21 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+
+//share between views
+//songs components
+@property ( strong, nonatomic) NSDictionary *MusicNote;
+@property ( strong, nonatomic) NSMutableArray *MusicArray;
+
+//selected file & record URL
+@property ( strong, nonatomic) NSURL *RecordFileURL;
+@property ( strong, nonatomic) NSURL *TrimmedRecordFileURL;
+
+
+@property ( strong, nonatomic) NSURL *SelectedFileURL;
+
+
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

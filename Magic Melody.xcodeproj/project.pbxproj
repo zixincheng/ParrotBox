@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		023E81061E07A682001DDABA /* recordingScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023E81041E07A682001DDABA /* recordingScreenController.m */; };
 		023E81071E07A682001DDABA /* recordingScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E81051E07A682001DDABA /* recordingScreenController.xib */; };
+		023E810D1E0BACF0001DDABA /* CroppingRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 023E810B1E0BACF0001DDABA /* CroppingRecordVC.m */; };
+		023E810E1E0BACF0001DDABA /* CroppingRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E810C1E0BACF0001DDABA /* CroppingRecordVC.xib */; };
 		0285C3741E05156100CD27DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3711E05156100CD27DE /* AVFoundation.framework */; };
 		0285C3761E05158700CD27DE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3751E05158700CD27DE /* Accelerate.framework */; };
 		944EA2541DE7FF5100C4A0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2531DE7FF5100C4A0F0 /* main.m */; };
@@ -37,6 +39,9 @@
 		023E81041E07A682001DDABA /* recordingScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = recordingScreenController.m; path = "Magic Melody/MainControl/Controller/recordingScreenController.m"; sourceTree = SOURCE_ROOT; };
 		023E81051E07A682001DDABA /* recordingScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = recordingScreenController.xib; path = "Magic Melody/MainControl/Controller/recordingScreenController.xib"; sourceTree = SOURCE_ROOT; };
 		023E81091E0AB66D001DDABA /* MusicCodeExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MusicCodeExample.h; path = "Magic Melody/MusicCodeExample.h"; sourceTree = SOURCE_ROOT; };
+		023E810A1E0BACF0001DDABA /* CroppingRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CroppingRecordVC.h; path = "Magic Melody/MainControl/Controller/CroppingRecordVC.h"; sourceTree = SOURCE_ROOT; };
+		023E810B1E0BACF0001DDABA /* CroppingRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CroppingRecordVC.m; path = "Magic Melody/MainControl/Controller/CroppingRecordVC.m"; sourceTree = SOURCE_ROOT; };
+		023E810C1E0BACF0001DDABA /* CroppingRecordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CroppingRecordVC.xib; path = "Magic Melody/MainControl/Controller/CroppingRecordVC.xib"; sourceTree = SOURCE_ROOT; };
 		0285C36F1E05156100CD27DE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0285C3701E05156100CD27DE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		0285C3711E05156100CD27DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +100,16 @@
 				023E81051E07A682001DDABA /* recordingScreenController.xib */,
 			);
 			name = recordingScreenController;
+			sourceTree = "<group>";
+		};
+		023E810F1E0BACF9001DDABA /* CroppingRecordVC */ = {
+			isa = PBXGroup;
+			children = (
+				023E810A1E0BACF0001DDABA /* CroppingRecordVC.h */,
+				023E810B1E0BACF0001DDABA /* CroppingRecordVC.m */,
+				023E810C1E0BACF0001DDABA /* CroppingRecordVC.xib */,
+			);
+			name = CroppingRecordVC;
 			sourceTree = "<group>";
 		};
 		0285C36E1E05156000CD27DE /* Frameworks */ = {
@@ -255,6 +270,7 @@
 		944EA2B41DF62E7000C4A0F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				023E810F1E0BACF9001DDABA /* CroppingRecordVC */,
 				023E81081E07A688001DDABA /* recordingScreenController */,
 				944EA2B51DF62E7F00C4A0F0 /* CustomNavigationController.h */,
 				944EA2B61DF62E7F00C4A0F0 /* CustomNavigationController.m */,
@@ -402,6 +418,7 @@
 				944EA2E41DF687B500C4A0F0 /* SettingViewController.xib in Resources */,
 				944EA2AB1DF62DD500C4A0F0 /* HomePageViewController.xib in Resources */,
 				944EA2D91DF6849300C4A0F0 /* ComposeViewController.xib in Resources */,
+				023E810E1E0BACF0001DDABA /* CroppingRecordVC.xib in Resources */,
 				944EA2CE1DF6826D00C4A0F0 /* LibraryViewController.xib in Resources */,
 				944EA2651DE7FF5100C4A0F0 /* LaunchScreen.storyboard in Resources */,
 				944EA2621DE7FF5100C4A0F0 /* Assets.xcassets in Resources */,
@@ -422,6 +439,7 @@
 				944EA2B21DF62E6200C4A0F0 /* UIImage+Image.m in Sources */,
 				944EA2C61DF681A200C4A0F0 /* HomePageViewController.m in Sources */,
 				944EA2B91DF62E7F00C4A0F0 /* CustomNavigationController.m in Sources */,
+				023E810D1E0BACF0001DDABA /* CroppingRecordVC.m in Sources */,
 				944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */,
 				944EA2541DE7FF5100C4A0F0 /* main.m in Sources */,
 				944EA2BE1DF62E9E00C4A0F0 /* CustomTabBar.m in Sources */,

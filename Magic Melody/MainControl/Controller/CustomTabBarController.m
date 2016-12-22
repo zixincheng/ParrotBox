@@ -6,6 +6,10 @@
 //  Copyright © 2016 zixin. All rights reserved.
 //
 #include <AudioToolbox/AudioToolbox.h>
+//=====recorder
+#import "AppDelegate.h"
+#import "recordingScreenController.h"
+
 
 
 #import "CustomTabBarController.h"
@@ -15,7 +19,7 @@
 #import "LibraryViewController.h"
 #import "HomePageViewController.h"
 
-#import "recordingScreenController.h"
+
 
 
 
@@ -26,7 +30,12 @@
 
 #define MaximumRecordTime 10.0 //define max record time
 @interface CustomTabBarController ()<CustomTabBarDelegate>{
+    
+    
     //essentials to record and normal play back and mechanism
+    
+    AppDelegate *global;
+    
     AVAudioPlayer *SoundPlayer;
     AVAudioRecorder *SoundRecorder;
     NSArray *RecordPathComponents;
@@ -82,6 +91,8 @@
     
     
     //==================recorder
+    global = [[UIApplication sharedApplication]delegate];
+    
     RecordPathComponents = [NSArray arrayWithObjects:
                             [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
                             @"MyAudioMemo.aac",
@@ -107,6 +118,11 @@
     SoundRecorder.meteringEnabled = YES;
     [SoundRecorder prepareToRecord];
     NSLog(@"%@",RecordOutputFileURL);
+    
+    global.RecordFileURL = RecordOutputFileURL;
+    [global saveContext];
+    
+    
     //======================end recorder
 
     

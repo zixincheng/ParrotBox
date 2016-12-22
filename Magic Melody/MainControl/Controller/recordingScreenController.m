@@ -7,6 +7,8 @@
 //
 
 #import "recordingScreenController.h"
+#import "AppDelegate.h"
+
 #define MaximumRecordTime 10
 
 @interface recordingScreenController ()
