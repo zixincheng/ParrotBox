@@ -11,6 +11,10 @@
 
 #define MaximumRecordTime 10
 
+//only a screen that cover on top of the function
+//no recording functionality, only animation
+
+
 @interface recordingScreenController ()
 {
     //for timer

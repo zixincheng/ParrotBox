@@ -9,6 +9,7 @@
 //=====recorder
 #import "AppDelegate.h"
 #import "recordingScreenController.h"
+#import "CroppingRecordVC.h"
 
 
 
@@ -49,6 +50,9 @@
     //essentials for record screen
     recordingScreenController *recordScreenVC;
     
+    //essential for cropping screen
+    CroppingRecordVC *croppingVC;
+    
     
 }
 
@@ -88,10 +92,11 @@
     [self setValue:tabbar forKeyPath:@"tabBar"];
     
     
-    
+    //get current global info
+    global = [[UIApplication sharedApplication]delegate];
     
     //==================recorder
-    global = [[UIApplication sharedApplication]delegate];
+    
     
     RecordPathComponents = [NSArray arrayWithObjects:
                             [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
@@ -119,12 +124,13 @@
     [SoundRecorder prepareToRecord];
     NSLog(@"%@",RecordOutputFileURL);
     
+    //======================end recorder
+    
+    //set the record URL to global for other view to access
     global.RecordFileURL = RecordOutputFileURL;
     [global saveContext];
+    //the code above may need to move to viewwillappear
     
-    
-    //======================end recorder
-
     
 
 }
@@ -259,7 +265,24 @@
     //eg, when 2 is selected, range of 2-2.5 is selected and ready to preview or crop
     //max is 9.5 to 10
     
+    //check duration of th record
+    SoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:global.RecordFileURL error:nil];
+    [SoundPlayer setDelegate:self];
+    NSLog(@"%f", SoundPlayer.duration);
     
+    if (SoundPlayer.duration >= 0.6){//minimum for cropping
+        croppingVC = [[CroppingRecordVC alloc] init];
+        [self.view addSubview:croppingVC.view];
+    }
+    else{//show error
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                        message:@"Records must be at least half of second long"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+
+    }
     
     
 
