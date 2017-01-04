@@ -13,6 +13,8 @@
 		023E810E1E0BACF0001DDABA /* CroppingRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E810C1E0BACF0001DDABA /* CroppingRecordVC.xib */; };
 		0285C3741E05156100CD27DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3711E05156100CD27DE /* AVFoundation.framework */; };
 		0285C3761E05158700CD27DE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3751E05158700CD27DE /* Accelerate.framework */; };
+		02B678471E1CE71600CA3AFC /* PlayComposeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B678451E1CE71600CA3AFC /* PlayComposeVC.m */; };
+		02B678481E1CE71700CA3AFC /* PlayComposeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B678461E1CE71600CA3AFC /* PlayComposeVC.xib */; };
 		944EA2541DE7FF5100C4A0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2531DE7FF5100C4A0F0 /* main.m */; };
 		944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2561DE7FF5100C4A0F0 /* AppDelegate.m */; };
 		944EA25D1DE7FF5100C4A0F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944EA25B1DE7FF5100C4A0F0 /* Main.storyboard */; };
@@ -46,6 +48,9 @@
 		0285C3701E05156100CD27DE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		0285C3711E05156100CD27DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0285C3751E05158700CD27DE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		02B678441E1CE71600CA3AFC /* PlayComposeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayComposeVC.h; path = "Magic Melody/MainControl/Controller/PlayComposeVC.h"; sourceTree = SOURCE_ROOT; };
+		02B678451E1CE71600CA3AFC /* PlayComposeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayComposeVC.m; path = "Magic Melody/MainControl/Controller/PlayComposeVC.m"; sourceTree = SOURCE_ROOT; };
+		02B678461E1CE71600CA3AFC /* PlayComposeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayComposeVC.xib; path = "Magic Melody/MainControl/Controller/PlayComposeVC.xib"; sourceTree = SOURCE_ROOT; };
 		944EA24F1DE7FF5100C4A0F0 /* Magic Melody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic Melody.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		944EA2531DE7FF5100C4A0F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		944EA2551DE7FF5100C4A0F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +126,16 @@
 				0285C3711E05156100CD27DE /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02B678491E1CE72200CA3AFC /* PlayComposeVC */ = {
+			isa = PBXGroup;
+			children = (
+				02B678441E1CE71600CA3AFC /* PlayComposeVC.h */,
+				02B678451E1CE71600CA3AFC /* PlayComposeVC.m */,
+				02B678461E1CE71600CA3AFC /* PlayComposeVC.xib */,
+			);
+			name = PlayComposeVC;
 			sourceTree = "<group>";
 		};
 		944EA2461DE7FF5100C4A0F0 = {
@@ -270,6 +285,7 @@
 		944EA2B41DF62E7000C4A0F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02B678491E1CE72200CA3AFC /* PlayComposeVC */,
 				023E810F1E0BACF9001DDABA /* CroppingRecordVC */,
 				023E81081E07A688001DDABA /* recordingScreenController */,
 				944EA2B51DF62E7F00C4A0F0 /* CustomNavigationController.h */,
@@ -422,6 +438,7 @@
 				944EA2CE1DF6826D00C4A0F0 /* LibraryViewController.xib in Resources */,
 				944EA2651DE7FF5100C4A0F0 /* LaunchScreen.storyboard in Resources */,
 				944EA2621DE7FF5100C4A0F0 /* Assets.xcassets in Resources */,
+				02B678481E1CE71700CA3AFC /* PlayComposeVC.xib in Resources */,
 				944EA25D1DE7FF5100C4A0F0 /* Main.storyboard in Resources */,
 				023E81071E07A682001DDABA /* recordingScreenController.xib in Resources */,
 			);
@@ -441,6 +458,7 @@
 				944EA2B91DF62E7F00C4A0F0 /* CustomNavigationController.m in Sources */,
 				023E810D1E0BACF0001DDABA /* CroppingRecordVC.m in Sources */,
 				944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */,
+				02B678471E1CE71600CA3AFC /* PlayComposeVC.m in Sources */,
 				944EA2541DE7FF5100C4A0F0 /* main.m in Sources */,
 				944EA2BE1DF62E9E00C4A0F0 /* CustomTabBar.m in Sources */,
 				944EA2601DE7FF5100C4A0F0 /* Magic_Melody.xcdatamodeld in Sources */,

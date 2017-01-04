@@ -8,6 +8,7 @@
 
 #import "CroppingRecordVC.h"
 #import "AppDelegate.h"
+#import "PlayComposeVC.h"
 
 @interface CroppingRecordVC (){
     AppDelegate *global;
@@ -19,6 +20,8 @@
     UISlider *cropSlider;
     UILabel *sliderLabel;
     UIButton *cropButton;
+    UIButton *cancelButton;
+    PlayComposeVC *playComposeView;
     
 }
 
@@ -59,12 +62,22 @@
     
     cropButton = [[UIButton alloc] init];
     cropButton.frame = CGRectMake(0, 0, screenWidth/3, screenHeight/12);
-    cropButton.frame = CGRectMake(screenWidth/4 - cropButton.frame.size.width/2, screenHeight/4, cropButton.frame.size.width, cropButton.frame.size.height);
+    cropButton.frame = CGRectMake(screenWidth/1.25 - cropButton.frame.size.width/2, screenHeight/4, cropButton.frame.size.width, cropButton.frame.size.height);
     cropButton.backgroundColor=[UIColor redColor];
     [cropButton setTitle:@"Crop" forState:UIControlStateNormal];
     [cropButton addTarget:self
                      action:@selector(croppingSound)
            forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    cancelButton = [[UIButton alloc] init];
+    cancelButton.frame = CGRectMake(0, 0, screenWidth/3, screenHeight/12);
+    cancelButton.frame = CGRectMake(screenWidth/4 - cancelButton.frame.size.width/2, screenHeight/4, cancelButton.frame.size.width, cancelButton.frame.size.height);
+    cancelButton.backgroundColor=[UIColor redColor];
+    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [cancelButton addTarget:self
+                   action:@selector(cancelCrop)
+         forControlEvents:UIControlEventTouchUpInside];
     
     
     
@@ -97,6 +110,7 @@
     [self.view addSubview:cropButton];
     [self.view addSubview:cropSlider];
     [self.view addSubview:sliderLabel];
+    [self.view addSubview:cancelButton];
 
 }
 -(void)previewTapped {
@@ -163,13 +177,21 @@
 
 -(void)croppingSound{//when crop button is pressed
     if ([self trimAudio]){
-        [self.view removeFromSuperview];//exit
+        
+        //[self.view removeFromSuperview];//exit
+        playComposeView = [[PlayComposeVC alloc] init];
+        [self.view addSubview: playComposeView.view];
+        
         
     }
     else{
         NSLog(@"Error at trimming audio");
     }
     
+}
+
+-(void)cancelCrop{
+    [self.view removeFromSuperview];//exit without doing anything
 }
 
 
@@ -186,13 +208,20 @@
     
     
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"ddMMyyyy_hhmmss";
-    NSString *lastString = [[formatter stringFromDate:[NSDate date]] stringByAppendingString:@".m4a"];
+    //NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    //formatter.dateFormat = @"ddMMyyyy_hhmmss";
+    //NSString *lastString = [[formatter stringFromDate:[NSDate date]] stringByAppendingString:@".m4a"];
+    /*
+     NSArray *pathComponents = [NSArray arrayWithObjects:
+                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
+                                [NSString stringWithFormat:@"RecordTrimmed_%@",lastString],
+                                nil];
+    */
+    NSString *lastString = @".m4a";
     
     NSArray *pathComponents = [NSArray arrayWithObjects:
                                [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject],
-                               [NSString stringWithFormat:@"RecordTrimmed_%@",lastString],
+                               [NSString stringWithFormat:@"RecordTrimmed%@",lastString],
                                nil];
     
     
