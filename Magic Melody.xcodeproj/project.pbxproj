@@ -34,6 +34,13 @@
 		944EA2D91DF6849300C4A0F0 /* ComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2D81DF6849300C4A0F0 /* ComposeViewController.xib */; };
 		944EA2E11DF686A900C4A0F0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2DF1DF686A900C4A0F0 /* SettingViewController.m */; };
 		944EA2E41DF687B500C4A0F0 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944EA2E31DF687B500C4A0F0 /* SettingViewController.xib */; };
+		94E9634F1E1A298100849083 /* ARSegmentPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E963491E1A298100849083 /* ARSegmentPageController.m */; };
+		94E963501E1A298100849083 /* ARSegmentPageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E9634C1E1A298100849083 /* ARSegmentPageHeader.m */; };
+		94E963511E1A298100849083 /* ARSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E9634E1E1A298100849083 /* ARSegmentView.m */; };
+		94E963541E1A2A7F00849083 /* RecordingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E963531E1A2A7F00849083 /* RecordingTableViewController.m */; };
+		94E9635A1E1A2ABE00849083 /* SoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E963591E1A2ABE00849083 /* SoundTableViewController.m */; };
+		94E9635D1E1A2AD000849083 /* ComposeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E9635C1E1A2AD000849083 /* ComposeTableViewController.m */; };
+		94E9635F1E1A30E100849083 /* listdownload.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94E9635E1E1A30E100849083 /* listdownload.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +89,21 @@
 		944EA2DE1DF686A900C4A0F0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Setting/Controller/SettingViewController.h; sourceTree = "<group>"; };
 		944EA2DF1DF686A900C4A0F0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Setting/Controller/SettingViewController.m; sourceTree = "<group>"; };
 		944EA2E31DF687B500C4A0F0 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingViewController.xib; path = Setting/View/SettingViewController.xib; sourceTree = "<group>"; };
+		94E963471E1A298100849083 /* ARSegmentControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentControllerDelegate.h; sourceTree = "<group>"; };
+		94E963481E1A298100849083 /* ARSegmentPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageController.h; sourceTree = "<group>"; };
+		94E963491E1A298100849083 /* ARSegmentPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentPageController.m; sourceTree = "<group>"; };
+		94E9634A1E1A298100849083 /* ARSegmentPageControllerHeaderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageControllerHeaderProtocol.h; sourceTree = "<group>"; };
+		94E9634B1E1A298100849083 /* ARSegmentPageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentPageHeader.h; sourceTree = "<group>"; };
+		94E9634C1E1A298100849083 /* ARSegmentPageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentPageHeader.m; sourceTree = "<group>"; };
+		94E9634D1E1A298100849083 /* ARSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSegmentView.h; sourceTree = "<group>"; };
+		94E9634E1E1A298100849083 /* ARSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSegmentView.m; sourceTree = "<group>"; };
+		94E963521E1A2A7F00849083 /* RecordingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordingTableViewController.h; path = Library/Controller/RecordingTableViewController.h; sourceTree = "<group>"; };
+		94E963531E1A2A7F00849083 /* RecordingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordingTableViewController.m; path = Library/Controller/RecordingTableViewController.m; sourceTree = "<group>"; };
+		94E963581E1A2ABE00849083 /* SoundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundTableViewController.h; path = Library/Controller/SoundTableViewController.h; sourceTree = "<group>"; };
+		94E963591E1A2ABE00849083 /* SoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundTableViewController.m; path = Library/Controller/SoundTableViewController.m; sourceTree = "<group>"; };
+		94E9635B1E1A2AD000849083 /* ComposeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComposeTableViewController.h; path = Library/Controller/ComposeTableViewController.h; sourceTree = "<group>"; };
+		94E9635C1E1A2AD000849083 /* ComposeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComposeTableViewController.m; path = Library/Controller/ComposeTableViewController.m; sourceTree = "<group>"; };
+		94E9635E1E1A30E100849083 /* listdownload.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = listdownload.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +231,7 @@
 		944EA2A01DF62CB000C4A0F0 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				94E963461E1A298100849083 /* ARSegmentPageController */,
 				944EA2A61DF62D7D00C4A0F0 /* Controller */,
 				944EA2A51DF62D7500C4A0F0 /* Model */,
 				944EA2A41DF62D6A00C4A0F0 /* View */,
@@ -258,8 +281,15 @@
 		944EA2A61DF62D7D00C4A0F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				94E9635E1E1A30E100849083 /* listdownload.jpg */,
 				944EA2C81DF6822F00C4A0F0 /* LibraryViewController.h */,
 				944EA2C91DF6822F00C4A0F0 /* LibraryViewController.m */,
+				94E963521E1A2A7F00849083 /* RecordingTableViewController.h */,
+				94E963531E1A2A7F00849083 /* RecordingTableViewController.m */,
+				94E963581E1A2ABE00849083 /* SoundTableViewController.h */,
+				94E963591E1A2ABE00849083 /* SoundTableViewController.m */,
+				94E9635B1E1A2AD000849083 /* ComposeTableViewController.h */,
+				94E9635C1E1A2AD000849083 /* ComposeTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -373,6 +403,22 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		94E963461E1A298100849083 /* ARSegmentPageController */ = {
+			isa = PBXGroup;
+			children = (
+				94E963471E1A298100849083 /* ARSegmentControllerDelegate.h */,
+				94E963481E1A298100849083 /* ARSegmentPageController.h */,
+				94E963491E1A298100849083 /* ARSegmentPageController.m */,
+				94E9634A1E1A298100849083 /* ARSegmentPageControllerHeaderProtocol.h */,
+				94E9634B1E1A298100849083 /* ARSegmentPageHeader.h */,
+				94E9634C1E1A298100849083 /* ARSegmentPageHeader.m */,
+				94E9634D1E1A298100849083 /* ARSegmentView.h */,
+				94E9634E1E1A298100849083 /* ARSegmentView.m */,
+			);
+			name = ARSegmentPageController;
+			path = Library/ARSegmentPageController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +480,7 @@
 				944EA2E41DF687B500C4A0F0 /* SettingViewController.xib in Resources */,
 				944EA2AB1DF62DD500C4A0F0 /* HomePageViewController.xib in Resources */,
 				944EA2D91DF6849300C4A0F0 /* ComposeViewController.xib in Resources */,
+				94E9635F1E1A30E100849083 /* listdownload.jpg in Resources */,
 				023E810E1E0BACF0001DDABA /* CroppingRecordVC.xib in Resources */,
 				944EA2CE1DF6826D00C4A0F0 /* LibraryViewController.xib in Resources */,
 				944EA2651DE7FF5100C4A0F0 /* LaunchScreen.storyboard in Resources */,
@@ -455,14 +502,20 @@
 				023E81061E07A682001DDABA /* recordingScreenController.m in Sources */,
 				944EA2B21DF62E6200C4A0F0 /* UIImage+Image.m in Sources */,
 				944EA2C61DF681A200C4A0F0 /* HomePageViewController.m in Sources */,
+				94E963511E1A298100849083 /* ARSegmentView.m in Sources */,
 				944EA2B91DF62E7F00C4A0F0 /* CustomNavigationController.m in Sources */,
 				023E810D1E0BACF0001DDABA /* CroppingRecordVC.m in Sources */,
 				944EA2571DE7FF5100C4A0F0 /* AppDelegate.m in Sources */,
 				02B678471E1CE71600CA3AFC /* PlayComposeVC.m in Sources */,
 				944EA2541DE7FF5100C4A0F0 /* main.m in Sources */,
+				94E963541E1A2A7F00849083 /* RecordingTableViewController.m in Sources */,
+				94E9634F1E1A298100849083 /* ARSegmentPageController.m in Sources */,
 				944EA2BE1DF62E9E00C4A0F0 /* CustomTabBar.m in Sources */,
+				94E9635D1E1A2AD000849083 /* ComposeTableViewController.m in Sources */,
 				944EA2601DE7FF5100C4A0F0 /* Magic_Melody.xcdatamodeld in Sources */,
 				944EA2D61DF6844800C4A0F0 /* ComposeViewController.m in Sources */,
+				94E9635A1E1A2ABE00849083 /* SoundTableViewController.m in Sources */,
+				94E963501E1A298100849083 /* ARSegmentPageHeader.m in Sources */,
 				944EA2BA1DF62E7F00C4A0F0 /* CustomTabBarController.m in Sources */,
 				944EA2B31DF62E6200C4A0F0 /* UIView+CustomExtension.m in Sources */,
 				944EA2E11DF686A900C4A0F0 /* SettingViewController.m in Sources */,

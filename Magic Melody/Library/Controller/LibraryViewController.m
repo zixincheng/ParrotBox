@@ -7,15 +7,25 @@
 //
 
 #import "LibraryViewController.h"
-
-@interface LibraryViewController ()
-
+#import "ARSegmentPageController.h"
+#import "RecordingTableViewController.h"
+#import "SoundTableViewController.h"
+#import "ComposeTableViewController.h"
+@interface LibraryViewController () <ARSegmentControllerDelegate>
+@property (nonatomic, strong) ARSegmentPageController *pager;
 @end
 
 @implementation LibraryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    RecordingTableViewController *recordingTable = [[RecordingTableViewController alloc] init];
+    SoundTableViewController *soundTable = [[SoundTableViewController alloc] init];
+    ComposeTableViewController *composeTable = [[ComposeTableViewController alloc] init];
+    ARSegmentPageController *pager = [[ARSegmentPageController alloc] initWithControllers:recordingTable,soundTable,composeTable,nil];
+    self.pager = pager;
+   // [self.pager addObserver:self forKeyPath:@"segmentToInset" options:NSKeyValueObservingOptionNew context:NULL];
+
     // Do any additional setup after loading the view from its nib.
 }
 

@@ -20,6 +20,10 @@
 #import "LibraryViewController.h"
 #import "HomePageViewController.h"
 
+#import "ARSegmentPageController.h"
+#import "RecordingTableViewController.h"
+#import "SoundTableViewController.h"
+#import "ComposeTableViewController.h"
 
 
 
@@ -30,7 +34,7 @@
 
 
 #define MaximumRecordTime 10.0 //define max record time
-@interface CustomTabBarController ()<CustomTabBarDelegate>{
+@interface CustomTabBarController ()<CustomTabBarDelegate, ARSegmentControllerDelegate>{
     
     
     //essentials to record and normal play back and mechanism
@@ -145,9 +149,15 @@
     
     HomePageViewController *HomeVC = [[HomePageViewController alloc] init];
     [self setUpOneChildVcWithVc:HomeVC Image:@"home_normal" selectedImage:@"home_highlight" title:@"Home"];
-     
-     LibraryViewController *LibVC = [[LibraryViewController alloc] init];
-     [self setUpOneChildVcWithVc:LibVC Image:@"fish_normal" selectedImage:@"fish_highlight" title:@"Library"];
+    
+    RecordingTableViewController *recordingTable = [[RecordingTableViewController alloc] init];
+    SoundTableViewController *soundTable = [[SoundTableViewController alloc] init];
+    ComposeTableViewController *composeTable = [[ComposeTableViewController alloc] init];
+    ARSegmentPageController *pager = [[ARSegmentPageController alloc] initWithControllers:recordingTable,soundTable,composeTable,nil];
+    
+     //LibraryViewController *LibVC = [[LibraryViewController alloc] init];
+     [self setUpOneChildVcWithVc:pager Image:@"fish_normal" selectedImage:@"fish_highlight" title:@"Library"];
+     [pager addObserver:self forKeyPath:@"segmentToInset" options:NSKeyValueObservingOptionNew context:NULL];
      
      ComposeViewController *ComposeVC = [[ComposeViewController alloc] init];
      [self setUpOneChildVcWithVc:ComposeVC Image:@"message_normal" selectedImage:@"message_highlight" title:@"Compose"];
@@ -158,7 +168,11 @@
 
 
 }
-
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    CGFloat topInset = [change[NSKeyValueChangeNewKey] floatValue];
+    NSLog(@"top inset is %f",topInset);
+}
 #pragma mark - 初始化设置tabBar上面单个按钮的方法
 
 /**
@@ -295,6 +309,11 @@
     CGFloat b = arc4random_uniform(256);
     return [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
 
+}
+
+-(NSString *)segmentTitle
+{
+    return @"common";
 }
 
 @end
