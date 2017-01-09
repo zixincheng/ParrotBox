@@ -192,9 +192,9 @@
     //=================================
     //set the music array in the setArray function
     
-    [self HBD];
+    //[self HBD];
     
-    //[self TTLS];
+    [self TTLS];
     
     //[self Lullaby];
     
@@ -300,7 +300,7 @@
     
     cancelButton = [[UIButton alloc] init];
     cancelButton.frame = CGRectMake(0, 0, screenWidth/3, screenHeight/12);
-    cancelButton.frame = CGRectMake(screenWidth/2 - cancelButton.frame.size.width/2, saveSwitch.frame.origin.y + screenHeight/6, cancelButton.frame.size.width, cancelButton.frame.size.height);
+    cancelButton.frame = CGRectMake(screenWidth/2 - cancelButton.frame.size.width/2, saveSwitch.frame.origin.y + screenHeight/12, cancelButton.frame.size.width, cancelButton.frame.size.height);
     cancelButton.backgroundColor=[UIColor redColor];
     [cancelButton setTitle:@"Back" forState:UIControlStateNormal];
     [cancelButton addTarget:self
@@ -311,7 +311,7 @@
     
     pitchSlider = [[UISlider alloc] init];
     pitchSlider.frame = CGRectMake(0, 0, screenWidth/2, screenHeight/12);
-    pitchSlider.frame = CGRectMake(screenWidth/2 - pitchSlider.frame.size.width/2, screenHeight*0.75, screenWidth/2, screenHeight/12);
+    pitchSlider.frame = CGRectMake(screenWidth/2 - pitchSlider.frame.size.width/2, screenHeight*0.85, screenWidth/2, screenHeight/12);
     //Pitch Max Min
     pitchSlider.maximumValue = pitchMax;
     pitchSlider.minimumValue = pitchMin;
@@ -324,7 +324,7 @@
     
     rateSlider = [[UISlider alloc] init];
     rateSlider.frame = CGRectMake(0, 0, screenWidth/2, screenHeight/12);
-    rateSlider.frame = CGRectMake(screenWidth/2 - rateSlider.frame.size.width/2, screenHeight*0.85, screenWidth/2, screenHeight/12);
+    rateSlider.frame = CGRectMake(screenWidth/2 - rateSlider.frame.size.width/2, screenHeight*0.9, screenWidth/2, screenHeight/12);
     
     //Rate Max Min
     rateSlider.maximumValue = rateMax;
@@ -338,9 +338,10 @@
     
     timePitchLabel = [[UILabel alloc]init];
     timePitchLabel.frame = CGRectMake(0, 0, screenWidth/2, screenHeight/12);
-    timePitchLabel.frame = CGRectMake(screenWidth/2 - pitchSlider.frame.size.width/2, screenHeight*0.65, screenWidth/1.5, screenHeight/12);
+    timePitchLabel.frame = CGRectMake(screenWidth/2 - pitchSlider.frame.size.width/2, screenHeight*0.8, screenWidth/1.5, screenHeight/12);
+    timePitchLabel.textAlignment = NSTextAlignmentCenter;
     
-    timePitchLabel.text = [NSString stringWithFormat:@"Pitch offset: %.2f . Rate offset: %.2f", pitchOffset, rateOffset];
+    timePitchLabel.text = [NSString stringWithFormat:@"Pitch: %.2f", pitchOffset];
     //===========================
     
     
@@ -357,9 +358,9 @@
     
     [self.view addSubview:cancelButton];
     
-    //[self.view addSubview:pitchSlider];
+    [self.view addSubview:pitchSlider];
     //[self.view addSubview:rateSlider];
-    //[self.view addSubview: timePitchLabel];
+    [self.view addSubview: timePitchLabel];
     
 }
 
@@ -377,7 +378,7 @@
     else{
         rateOffset = sender.value;
     }
-    timePitchLabel.text = [NSString stringWithFormat:@"Pitch: %.2f . Rate: %.4f", pitchOffset, rateOffset];
+    timePitchLabel.text = [NSString stringWithFormat:@"Pitch: %.2f", pitchOffset];
     
 }
 
