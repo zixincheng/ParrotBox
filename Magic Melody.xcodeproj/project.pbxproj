@@ -13,6 +13,7 @@
 		023E810E1E0BACF0001DDABA /* CroppingRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 023E810C1E0BACF0001DDABA /* CroppingRecordVC.xib */; };
 		0285C3741E05156100CD27DE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3711E05156100CD27DE /* AVFoundation.framework */; };
 		0285C3761E05158700CD27DE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C3751E05158700CD27DE /* Accelerate.framework */; };
+		02B00B361E2320F1009135AE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285C36F1E05156100CD27DE /* AudioToolbox.framework */; };
 		02B678471E1CE71600CA3AFC /* PlayComposeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B678451E1CE71600CA3AFC /* PlayComposeVC.m */; };
 		02B678481E1CE71700CA3AFC /* PlayComposeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B678461E1CE71600CA3AFC /* PlayComposeVC.xib */; };
 		944EA2541DE7FF5100C4A0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EA2531DE7FF5100C4A0F0 /* main.m */; };
@@ -55,6 +56,7 @@
 		0285C3701E05156100CD27DE /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		0285C3711E05156100CD27DE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0285C3751E05158700CD27DE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		02B00B351E2320F0009135AE /* Magic Melody.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Magic Melody.entitlements"; sourceTree = "<group>"; };
 		02B678441E1CE71600CA3AFC /* PlayComposeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayComposeVC.h; path = "Magic Melody/MainControl/Controller/PlayComposeVC.h"; sourceTree = SOURCE_ROOT; };
 		02B678451E1CE71600CA3AFC /* PlayComposeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayComposeVC.m; path = "Magic Melody/MainControl/Controller/PlayComposeVC.m"; sourceTree = SOURCE_ROOT; };
 		02B678461E1CE71600CA3AFC /* PlayComposeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayComposeVC.xib; path = "Magic Melody/MainControl/Controller/PlayComposeVC.xib"; sourceTree = SOURCE_ROOT; };
@@ -113,6 +115,7 @@
 			files = (
 				0285C3761E05158700CD27DE /* Accelerate.framework in Frameworks */,
 				0285C3741E05156100CD27DE /* AVFoundation.framework in Frameworks */,
+				02B00B361E2320F1009135AE /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +183,7 @@
 		944EA2511DE7FF5100C4A0F0 /* Magic Melody */ = {
 			isa = PBXGroup;
 			children = (
+				02B00B351E2320F0009135AE /* Magic Melody.entitlements */,
 				944EA2DA1DF6854600C4A0F0 /* Setting */,
 				944EA2CF1DF6827900C4A0F0 /* Compose */,
 				944EA2A01DF62CB000C4A0F0 /* Library */,
@@ -450,7 +454,16 @@
 				TargetAttributes = {
 					944EA24E1DE7FF5100C4A0F0 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = JA8V43A23F;
+						DevelopmentTeam = PHQGQUAN3R;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -632,9 +645,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Magic Melody/Magic Melody.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PHQGQUAN3R;
 				INFOPLIST_FILE = "Magic Melody/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zixincheng.Magic-Melody";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-Melody";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -643,9 +659,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Magic Melody/Magic Melody.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PHQGQUAN3R;
 				INFOPLIST_FILE = "Magic Melody/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zixincheng.Magic-Melody";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-Melody";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
