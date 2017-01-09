@@ -22,12 +22,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <!-- 🎤 Microphone -->
-    <key>NSMicrophoneUsageDescription</key>
-    <string>$(PRODUCT_NAME) microphone use</string>
-    <!-- 🎵 Media Library -->
-    <key>NSAppleMusicUsageDescription</key>
-    <string>$(PRODUCT_NAME) media library use</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>$(PRODUCT_NAME) media library use</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(PRODUCT_NAME) microphone use</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
@@ -46,8 +44,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -50,6 +50,8 @@
         
         [plusBtn addTarget:self action:@selector(plusBtnDidRelease) forControlEvents:UIControlEventTouchUpInside];
         
+        [plusBtn addTarget:self action:@selector(plusBtnDidRelease) forControlEvents:UIControlEventTouchUpOutside];
+        
         [self addSubview:plusBtn];
         
         
