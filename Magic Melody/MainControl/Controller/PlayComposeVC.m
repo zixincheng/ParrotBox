@@ -433,13 +433,12 @@
     fileLength3 = 0;
     
     count = 0;
+    
     pausePosition = 0;
     safeIncrement= 0;
     
     [self reEnable];
-    
-    
-    
+
     //============
     
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
@@ -490,6 +489,7 @@
 -(void)ComposeAudio{
     composeButton.enabled=false;
     count = (int)[MusicArray count]  ;//cal the count
+
     
     //reset everything before it starts
     
@@ -992,18 +992,25 @@
 
 //compose song pause
 -(void)pausePlayCompose{
+    composeButton.enabled = NO;
+    
     countTemp = count;
     posTemp = pausePosition - 3;
-    incrementTemp = safeIncrement;
+    
+    if(posTemp <= 0){
+        pausePosition = 0;// it considers as just start
+    }
+    
     [self stopTapped];
-    [self performSelector:@selector(resetPosition) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(resetPosition) withObject:nil afterDelay:1.5];
     
     
 }
 
 -(void)resetPosition{
     //pauseposition become zero, need to set back
-    NSLog(@"reset");
+    NSLog(@"reset pause pos");
+    pausePosition = posTemp;
     if(pausePosition >= countTemp-3){
         pausePosition = 0;// it considers as finished playback
         safeIncrement = 0;
@@ -1013,6 +1020,9 @@
             pausePosition = posTemp;
             safeIncrement = pausePosition%3;
         }
+    }
+    if(!composeButton.isEnabled ){
+        composeButton.enabled = YES;
     }
 }
 
